@@ -22,22 +22,25 @@ public class main {
 		Map<Character, Integer> mas = new HashMap<Character,Integer>();
 		Map<String, Integer> binmas = new HashMap<String,Integer>();
 		Map<Character,Character> charmap = new HashMap<Character,Character>();
-		Stack binst = new Stack<String>();
+		int step=3;
 		System.out.println("Analysing...");
 		analyse(mas,decodedWay);
 		analysebin(binmas,decodedWay);
 		System.out.println("OK");
 		System.out.println("Coding ...");
-		code(3,codedWay,decodedWay);
+		code(step,codedWay,decodedWay);
 		System.out.println("OK");
 		System.out.println("Decoding...");
 		createTable(charmap,mas,codedWay);
 		modifyTable(charmap,decodedWay,codedWay);
 		decode(charmap, codedWay,newWay);
 		System.out.println("OK");
+		int counter=0;
 		for(Entry<Character, Character> i : charmap.entrySet()){
 			System.out.println(i.getKey()+" "+i.getValue());
+			if(i.getKey()==(char)(i.getValue()+step)) counter++ ;
 		 }
+		System.out.println(((double)counter/33.0)*100.0+"% correct");
 
 	}
 	
@@ -370,4 +373,5 @@ public class main {
 			 }
 		 
 	 }
+
 }
