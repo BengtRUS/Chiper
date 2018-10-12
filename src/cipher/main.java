@@ -16,9 +16,9 @@ public class main {
 	
 	
 	public static void main(String[] args) {
-		String codedWay = "C:/Users/Kamurin/Desktop/mastercoded.txt";
-		String decodedWay = "C:/Users/Kamurin/Desktop/master.txt";
-		String newWay = "C:/Users/Kamurin/Desktop/masternew.txt";
+		String codedWay = "mastercoded.txt";
+		String decodedWay = "master.txt";
+		String newWay = "masternew.txt";
 		Map<Character, Integer> mas = new HashMap<Character,Integer>();
 		Map<String, Integer> binmas = new HashMap<String,Integer>();
 		Map<Character,Character> charmap = new HashMap<Character,Character>();
